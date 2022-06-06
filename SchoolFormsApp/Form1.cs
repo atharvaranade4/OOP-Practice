@@ -37,6 +37,23 @@ namespace SchoolFormsApp
             }  
             
             MessageBox.Show(testSchool.ToString());
+
+            var teacher = new Teacher(); //for test only, remove later
+            
+        }
+
+        private void btnTestTeacher_Click(object sender, EventArgs e)
+        {
+            var teacher = new Teacher();
+            var gp = teacher.ComputeGradeAverage();
+            MessageBox.Show("The teacher's grade average is " + gp);
+        }
+
+        private void btnTestStudent_Click(object sender, EventArgs e)
+        {
+            var student = new Student();
+            var gp = student.ComputeGradeAverage();
+            MessageBox.Show("The student's grade average is " + gp);
         }
     }
 }
